@@ -46,18 +46,12 @@ const Landing = ({ setSelectedPage }) => {
           }}
         >
           <p className="text-6xl font-playfair z-10 text-center md:text-start">
-            Jane {""}
-            <span
-              className="xs:relative xs:text-deep-blue xs:font-semibold z-20 xs:before:content-brush
-              before:absolute before:-left-[25px] before:-top-[70px] before:z-[-1]"
-            >
-              Esper
-            </span>
+            Trinity {""}
+            Mozingo {""}
           </p>
 
-          <p className="mt-10 mb-7 text-sm text-center md:text-start">
-            Adipiscing arcu, in aliquam fringilla cursus. Elit arcu elementum
-            viverra malesuada sem ac faucibus dolor. Sagittis scelerisque.
+          <p className="mt-10 mb-7 text-m text-center md:text-start w-65">
+            Software developer and UI/UX Designer. Crafting my life’s adventures with a playful spirit and a great playlist!
           </p>
         </motion.div>
 
@@ -73,21 +67,28 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <AnchorLink
+          {/* TURN THIS INTO A RESUME BUTTON */}
+          {/* <button
+              className="p-5 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-red hover:text-white transition duration-500"
+              type="submit"
+            >
+              TEST
+            </button> */}
+          {/* <AnchorLink
             className="bg-gradient-rainblue text-deep-blue rounded-sm py-3 px-7 font-semibold
               hover:bg-blue hover:text-white transition duration-500"
             onClick={() => setSelectedPage("contact")}
             href="#contact"
           >
-            Contact Me
-          </AnchorLink>
+            Resume
+          </AnchorLink> */}
           <AnchorLink
-            className="rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5"
-            onClick={() => setSelectedPage("contact")}
-            href="#contact"
+            className="rounded-r-sm bg-blue py-0.5 px-0.5"
+            onClick={() => setSelectedPage("projects")}
+            href="#projects"
           >
-            <div className="bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center justify-center px-10 font-playfair">
-              Let's talk.
+            <div className="bg-white hover:text-blue transition duration-500 w-full h-full flex items-center justify-center px-10 py-3 font-semibold">
+              MY WORK
             </div>
           </AnchorLink>
         </motion.div>

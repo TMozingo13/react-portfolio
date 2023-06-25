@@ -49,7 +49,7 @@ const MySkills = () => {
 
       {/* SKILLS */}
       <div className="md:flex md:justify-between mt-16 gap-32">
-        {/* EXPERIENCE */}
+        {/* FULLSTACK */}
         <motion.div
           className="md:w-1/3 mt-10"
           initial="hidden"
@@ -65,19 +65,19 @@ const MySkills = () => {
             <div className="z-10">
               <p className="font-playfair font-semibold text-5xl">01</p>
               <p className="font-playfair font-semibold text-3xl mt-3">
-                Experience
+                Fullstack Development
               </p>
             </div>
             <div className="w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]" />
           </div>
           <p className="mt-5">
-            A auctor pharetra hendrerit mattis amet etiam interdum platea. Est
-            morbi porttitor scelerisque fermentum, sagittis non egestas. Amet
-            odio sit sagittis,
+            Proficient in Java, Python, C#, JavaScript, .NET, and familiar with React, Tailwind,
+            and TypeScript, I excel at building robust, end-to-end applications with seamless
+            integration between frontend and backend components.
           </p>
         </motion.div>
 
-        {/* INNOVATIVE */}
+        {/* WEB */}
         <motion.div
           className="md:w-1/3 mt-10"
           initial="hidden"
@@ -93,19 +93,18 @@ const MySkills = () => {
             <div className="z-10">
               <p className="font-playfair font-semibold text-5xl">02</p>
               <p className="font-playfair font-semibold text-3xl mt-3">
-                Innovative
+                Web Development
               </p>
             </div>
             <div className="w-1/2 md:w-3/4 h-32 bg-red absolute right-0 top-0 z-[-1]" />
           </div>
           <p className="mt-5">
-            Urna, eget pulvinar dolor cursus volutpat dictum odio. Nec ultricies
-            amet in in neque nibh tortor. Libero sed pretium justo nulla blandit
-            nulla amet habitant iaculis. Iaculis in congue vitae sollicitudin
-            faucibus a
+            Experienced in developing web applications and websites, including this portfolio
+             I combine my expertise in HTML, CSS, and JavaScript to create visually appealing
+              and user-friendly experiences that adapt flawlessly to various devices.
           </p>
         </motion.div>
-        {/* IMAGINATIVE */}
+        {/* DESIGN */}
         <motion.div
           className="md:w-1/3 mt-10"
           initial="hidden"
@@ -121,16 +120,15 @@ const MySkills = () => {
             <div className="z-10">
               <p className="font-playfair font-semibold text-5xl">03</p>
               <p className="font-playfair font-semibold text-3xl mt-3">
-                Imaginative
+                UI/UX Design
               </p>
             </div>
             <div className="w-1/2 md:w-3/4 h-32 bg-yellow absolute right-0 top-0 z-[-1]" />
           </div>
           <p className="mt-5">
-            Accumsan eu fringilla nisi, eget. Vitae, eget ut id proin arcu in
-            curabitur. Lectus libero, egestas enim aliquam quis felis amet.
-            Sagittis, amet netus fringilla netus lobortis odio sed platea.
-            Bibendum.
+            Passionate about UI/UX design, I have experience in conducting user research
+            , interviews, and employing the entire design process. Skilled in using Figma for prototyping
+            , I strive to craft visually appealing and intuitive interfaces that optimize user satisfaction.
           </p>
         </motion.div>
       </div>
