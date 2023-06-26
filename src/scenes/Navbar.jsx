@@ -1,8 +1,11 @@
 import { useState } from "react";
+import ProjectDrop from "../components/Dropdown";
+import { Dropdown } from "rsuite";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../hooks/useMediaQuery";
+import {Link} from "react-router-dom";
 
-const Link = ({ page, selectedPage, setSelectedPage }) => {
+const PageLink = ({ pageName, page, selectedPage, setSelectedPage }) => {
   const lowerCasePage = page.toLowerCase();
   return (
     <AnchorLink
@@ -12,10 +15,20 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
       href={`#${lowerCasePage}`}
       onClick={() => setSelectedPage(lowerCasePage)}
     >
-      {page}
+      {pageName}
     </AnchorLink>
   );
 };
+
+// const MyLink = React.forwardRef((props, ref) => {
+//   const { href, as, ...rest } = props;
+//   return (
+//     <Link href={href} as={as}>
+//       <a ref={ref} {...rest} />
+//     </Link>
+//   );
+// });
+
 
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
@@ -30,27 +43,42 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
         {/* DESKTOP NAV */}
         {isDesktop ? (
           <div className="flex justify-between gap-16 font-opensans text-sm font-semibold">
-            <Link
+            <PageLink
+              pageName="Home"
               page="Home"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-            <Link
-              page="Projects"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Link
+            
+            <div className="">
+              <Dropdown title="Projects" trigger="hover">
+                <Dropdown.Item className="pt-3 border-none">
+                  <PageLink
+                    pageName="All"
+                    page="Projects"
+                    selectedPage={selectedPage}
+                    setSelectedPage={setSelectedPage}/>
+                </Dropdown.Item>
+                <Dropdown.Item className=" hover:text-yellow pt-3">
+                  <a href="./test.html">Fresh</a>
+                </Dropdown.Item>
+              </Dropdown>
+            </div>
+           
+            <PageLink
+              pageName="Skills"
               page="Skills"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-            <Link
+            <PageLink
+              pageName="About"
               page="About"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-            <Link
+            <PageLink
+              pageName="Contact"
               page="Contact"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
@@ -77,27 +105,27 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
 
             {/* MENU ITEMS */}
             <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue">
-              <Link
+              <pageLink
                 page="Home"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
-               <Link
+               <pageLink
                 page="Projects"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
-              <Link
+              <pageLink
                 page="Skills"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
-              <Link
+              <pageLink
               page="About"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-              <Link
+              <pageLink
                 page="Contact"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}

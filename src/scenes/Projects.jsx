@@ -17,7 +17,9 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const Project = ({ title, url = "/" }) => {
+const Project = ({ title, url = "/", description }) => {
+
+
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
     bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
   const projectTitle = title.split(" ").join("-").toLowerCase();
@@ -28,11 +30,11 @@ const Project = ({ title, url = "/" }) => {
       <div className={overlayStyles}>
         <p className="text-2xl font-playfair">{title}</p>
         <p className="mt-7">
-          Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla
-          porttitor accumsan tincidunt.
+          {description}
         </p>
       </div>
-      <img src={`../assets/${projectTitle}.jpeg`} alt={projectTitle} />
+      <img src={`../assets/project-1.jpeg`} alt={projectTitle} />
+      {/* <img src={`../assets/${projectTitle}.jpeg`} alt={projectTitle} /> */}
     </motion.div>
     </Link>
   );
@@ -62,9 +64,7 @@ const Projects = () => {
           </div>
         </div>
         <p className="mt-10 mb-10">
-          Aliquam, amet dui feugiat facilisi dui. Aliquam aliquet integer ut
-          fames odio in at. At magna ornare dictum lectus. Purus massa morbi
-          purus nec eget eleifend ut elit.
+           Check out my work from UI/UX Design and Software Development!
         </p>
       </motion.div>
 
@@ -84,15 +84,20 @@ const Projects = () => {
           >
             BEAUTIFUL USER INTERFACES
           </div>
+          <Project 
+            title="Fresh" 
+            url='project-1'
+            decripstion="An app to track food and prevent waste"
+           />
+          <Project 
+            title="Case In One Place"
+            description="A file management system that addresses the greatest pains of lawyers currently"
+          />
 
-          <Project title="Project 1" url="project-1" />
-
-          <Project title="Project 2" />
-
-          {/* ROW 2 */}
+          {/* ROW 2
           <Project title="Project 3" />
           <Project title="Project 4" />
-          <Project title="Project 5" />
+          <Project title="Project 5" /> */}
 
           {/* ROW 3 */}
           <Project title="Project 6" />
