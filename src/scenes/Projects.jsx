@@ -34,7 +34,6 @@ const Project = ({ title, url = "/", description }) => {
         </p>
       </div>
       <img src={`../assets/project-1.jpeg`} alt={projectTitle} />
-      {/* <img src={`../assets/${projectTitle}.jpeg`} alt={projectTitle} /> */}
     </motion.div>
     </Link>
   );
