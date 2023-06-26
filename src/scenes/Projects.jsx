@@ -1,5 +1,7 @@
 import LineGradient from "../components/LineGradient";
 import { motion } from "framer-motion";
+import React from "react";
+import { Link } from "react-router-dom";
 
 const container = {
   hidden: {},
@@ -15,12 +17,13 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const Project = ({ title }) => {
+const Project = ({ title, url = "/" }) => {
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
     bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
   const projectTitle = title.split(" ").join("-").toLowerCase();
 
   return (
+    <Link to={url} style={{zIndex:1}}>
     <motion.div variants={projectVariant} className="relative">
       <div className={overlayStyles}>
         <p className="text-2xl font-playfair">{title}</p>
@@ -31,6 +34,7 @@ const Project = ({ title }) => {
       </div>
       <img src={`../assets/${projectTitle}.jpeg`} alt={projectTitle} />
     </motion.div>
+    </Link>
   );
 };
 
@@ -80,7 +84,9 @@ const Projects = () => {
           >
             BEAUTIFUL USER INTERFACES
           </div>
-          <Project title="Project 1" />
+
+          <Project title="Project 1" url="project-1" />
+
           <Project title="Project 2" />
 
           {/* ROW 2 */}
