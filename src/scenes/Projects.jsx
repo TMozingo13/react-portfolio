@@ -86,7 +86,7 @@ const Projects = () => {
           <Project 
             title="Fresh" 
             url='project-1'
-            decripstion="An app to track food and prevent waste"
+            description="An app to track food and prevent waste"
            />
           <Project 
             title="Case In One Place"
