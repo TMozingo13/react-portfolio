@@ -60,7 +60,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
                     setSelectedPage={setSelectedPage}/>
                 </Dropdown.Item>
                 <Dropdown.Item className=" hover:text-yellow pt-3">
-                  <a href="./project-1">Fresh</a>
+                  <a href="./fresh">Fresh</a>
                 </Dropdown.Item>
               </Dropdown>
             </div>

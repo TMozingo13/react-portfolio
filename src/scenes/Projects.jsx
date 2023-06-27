@@ -81,11 +81,11 @@ const Projects = () => {
             className="flex justify-center text-center items-center p-10 bg-red
               max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
           >
-            BEAUTIFUL USER INTERFACES
+            UI/UX DESIGN
           </div>
           <Project 
             title="Fresh" 
-            url='project-1'
+            url='fresh'
             description="An app to track food and prevent waste"
            />
           <Project 
@@ -105,7 +105,7 @@ const Projects = () => {
             className="flex justify-center text-center items-center p-10 bg-blue
               max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
           >
-            SMOOTH USER EXPERIENCE
+            SOFTWARE DEVELOPMENT
           </div>
         </motion.div>
       </div>
