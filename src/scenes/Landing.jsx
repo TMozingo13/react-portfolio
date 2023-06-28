@@ -2,6 +2,7 @@ import SocialMediaIcons from "../components/SocialMediaIcons";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import { TypeAnimation } from "react-type-animation";
 
 const Landing = ({ setSelectedPage }) => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
@@ -19,8 +20,8 @@ const Landing = ({ setSelectedPage }) => {
           >
             <img
               alt="profile"
-              className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[600px]"
-              src="assets/person-1.png"
+              className="transition duration-500 z-10 w-full max-w-[400px] md:max-w-[600px]"
+              src="assets/profile-image.png"
             />
           </div>
         ) : (
@@ -49,8 +50,24 @@ const Landing = ({ setSelectedPage }) => {
             Trinity {""}
             Mozingo {""}
           </p>
+          <p className="text-5xl font-playfair z-10 text-center md:text-start mt-3"> 
+            <span className="mr-4">I am a</span>
+            <TypeAnimation sequence = {[
+              'Developer',
+              3000,
+              'Designer',
+              3000,
+              'Fahionista',
+              3000,
+              ]}
+              speed={50}
+              className='text-blue'
+              wrapper="span"
+              repeat={Infinity}
+            />
 
-          <p className="mt-10 mb-7 text-m text-center md:text-start w-65">
+          </p>
+          <p className="mt-8 mb-7 text-m text-center md:text-start w-65">
             Software developer and UI/UX Designer. Crafting my life’s adventures with a playful spirit and a great playlist!
           </p>
         </motion.div>
