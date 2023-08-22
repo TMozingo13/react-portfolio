@@ -34,7 +34,7 @@ const About = () => {
       </motion.div>
 
       {/* SIDE STUFF */}
-      <div className="mt-16 md:mt-0">
+      <div className="mt-16 md:mt-0 sm:grid sm:grid-cols-1">
         <div className="mt-16 md:mt-0">
           {isAboveLarge ? (
             <div
@@ -43,33 +43,34 @@ const About = () => {
             >
               <img
                 alt="skills"
-                className="z-10"
-                src="assets/skills-image.png"
+                className="z-10 h-[600px] w-full"
+                src="assets/city-pic.JPG"
               />
             </div>
           ) : (
             <img alt="skills" className="z-10" src="assets/skills-image.png" />
           )}
         </div>
-      </div>
-       
-      <div className="mt-20 md:mt-30 justify-content:center">
+        {/* <div className="mt-20 md:mt-30 justify-content:center">
           {isAboveLarge ? (
             <div
-              className="relative z-0 ml-20 before:absolute before:-bottom-10 before:-right-10
+              className="relative z-0 ml-20 before:absolute before:-top-10 before:-right-10
               before:w-full before:h-full before:border-2 before:border-blue before:z-[-1]"
             >
               <img
                 alt="skills"
-                className="z-10"
+                className="z-10 mb-10"
                 src="assets/skills-image.png"
               />
             </div>
           ) : (
             <img alt="skills" className="z-10" src="assets/skills-image.png" />
           )}
-        </div>
-        </div>
+        </div> */}
+      </div>
+       
+      
+      </div>
     </section>
   );
 };

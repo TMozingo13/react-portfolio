@@ -21,14 +21,14 @@ const Landing = ({ setSelectedPage }) => {
             <img
               alt="profile"
               className="transition duration-500 z-10 w-full max-w-[400px] md:max-w-[600px]"
-              src="assets/profile-image.png"
+              src="assets/pic.png"
             />
           </div>
         ) : (
           <img
             alt="profile"
             className="z-10 w-full max-w-[400px] md:max-w-[600px]"
-            src="assets/profile-image.png"
+            src="assets/pic.png"
           />
         )}
       </div>
@@ -57,7 +57,7 @@ const Landing = ({ setSelectedPage }) => {
               3000,
               'Designer',
               3000,
-              'Fahionista',
+              'Fashionista',
               3000,
               ]}
               speed={50}
@@ -74,7 +74,7 @@ const Landing = ({ setSelectedPage }) => {
 
         {/* CALL TO ACTIONS */}
         <motion.div
-          className="flex mt-5 justify-center md:justify-start"
+          className="flex mt-5"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -85,14 +85,14 @@ const Landing = ({ setSelectedPage }) => {
           }}
         >
           {/* TURN THIS INTO A RESUME BUTTON */}
-          {/* <button
-              className="p-5 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-red hover:text-white transition duration-500"
+          <button
+              className="p-5 mr-10 py-3 px-7 bg-green font-semibold text-deep-blue mt-5 hover:bg-red hover:text-white transition duration-500 w-[135px]"
               type="submit"
             >
-              TEST
-            </button> */}
+              RESUME
+            </button>
           {/* <AnchorLink
-            className="bg-gradient-rainblue text-deep-blue rounded-sm py-3 px-7 font-semibold
+            className="bg-gradient-rainblue text-deep-blue rounded-sm  font-semibold
               hover:bg-blue hover:text-white transition duration-500"
             onClick={() => setSelectedPage("contact")}
             href="#contact"
@@ -100,11 +100,11 @@ const Landing = ({ setSelectedPage }) => {
             Resume
           </AnchorLink> */}
           <AnchorLink
-            className="rounded-r-sm bg-blue py-0.5 px-0.5"
+            className="rounded-r-sm bg-blue px-0.5 py-0.5 h-[48px] mt-5"
             onClick={() => setSelectedPage("projects")}
             href="#projects"
           >
-            <div className="bg-white hover:text-blue transition duration-500 w-full h-full flex items-center justify-center px-10 py-3 font-semibold">
+            <div className="bg-white px-7 py-3 hover:text-blue transition duration-500 w-full h-full flex items-center justify-center font-semibold">
               MY WORK
             </div>
           </AnchorLink>
@@ -121,7 +121,6 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <SocialMediaIcons />
         </motion.div>
       </div>
     </section>

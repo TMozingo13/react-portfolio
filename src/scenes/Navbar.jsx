@@ -33,25 +33,25 @@ const PageLink = ({ pageName, page, selectedPage, setSelectedPage }) => {
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isDesktop = useMediaQuery("(min-width: 768px)");
-  const navbarBackground = isTopOfPage ? "" : "bg-blue";
+  const navbarBackground = isTopOfPage ? "" : "bg-blue text-black";
 
   return (
     <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
-        <h4 className="font-playfair text-3xl font-bold text-yellow">TM</h4>
+        <h4 className="font-playfair text-3xl font-bold text-black">TM</h4>
 
         {/* DESKTOP NAV */}
         {isDesktop ? (
           <div className="flex justify-between gap-16 font-opensans text-sm font-semibold">
             <PageLink
-              pageName="Home"
+              pageName="HOME"
               page="Home"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
             
             <div className="">
-              <Dropdown title="Projects" trigger="hover">
+              <Dropdown title="PROJECTS" trigger="hover">
                 <Dropdown.Item className="pt-3 border-none">
                   <PageLink
                     pageName="All"
@@ -62,23 +62,26 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
                 <Dropdown.Item className=" hover:text-yellow pt-3">
                   <a href="./fresh">Fresh</a>
                 </Dropdown.Item>
+                <Dropdown.Item className=" hover:text-yellow pt-3">
+                  <a href="./case">Case in One Place</a>
+                </Dropdown.Item>
               </Dropdown>
             </div>
            
             <PageLink
-              pageName="Skills"
+              pageName="SKILLS"
               page="Skills"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
             <PageLink
-              pageName="About"
+              pageName="ABOUT"
               page="About"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
             <PageLink
-              pageName="Contact"
+              pageName="CONTACT"
               page="Contact"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
@@ -105,31 +108,49 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
 
             {/* MENU ITEMS */}
             <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue">
-              <pageLink
-                page="Home"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-               <pageLink
-                page="Projects"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-              <pageLink
-                page="Skills"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-              <pageLink
+            <PageLink
+              pageName="HOME"
+              page="Home"
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
+            />
+            
+            <div className="">
+              <Dropdown title="PROJECTS" trigger="hover">
+                <Dropdown.Item className="pt-3 border-none">
+                  <PageLink
+                    pageName="All"
+                    page="Projects"
+                    selectedPage={selectedPage}
+                    setSelectedPage={setSelectedPage}/>
+                </Dropdown.Item>
+                <Dropdown.Item className=" hover:text-yellow pt-3">
+                  <a href="./fresh">Fresh</a>
+                </Dropdown.Item>
+                <Dropdown.Item className=" hover:text-yellow pt-3">
+                  <a href="./case">Case in One Place</a>
+                </Dropdown.Item>
+              </Dropdown>
+            </div>
+           
+            <PageLink
+              pageName="SKILLS"
+              page="Skills"
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
+            />
+            <PageLink
+              pageName="ABOUT"
               page="About"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-              <pageLink
-                page="Contact"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
+            <PageLink
+              pageName="CONTACT"
+              page="Contact"
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
+            />
             </div>
           </div>
         )}

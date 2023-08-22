@@ -23,6 +23,9 @@ export const ProjectNav = () =>{
                             <Dropdown.Item className=" hover:text-yellow pt-3">
                             <a href="./fresh">Fresh</a>
                             </Dropdown.Item>
+                            <Dropdown.Item className=" hover:text-yellow pt-3">
+                            <a href="./case">Case In One Place</a>
+                            </Dropdown.Item>
                         </Dropdown>
                     </div>
                     

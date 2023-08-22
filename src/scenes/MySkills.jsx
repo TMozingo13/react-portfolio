@@ -1,6 +1,9 @@
 import LineGradient from "../components/LineGradient";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
+import FullstackIcons from "../components/FullstackIcons";
+import WebIcons from "../components/WebIcons";
+import UXIcons from "../components/UXIcons";
 
 const MySkills = () => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
@@ -24,12 +27,11 @@ const MySkills = () => {
           </p>
           <LineGradient width="w-1/3" />
           <p className="mt-10 mb-7">
-            Aliquam, amet dui feugiat facilisi dui. Aliquam aliquet integer ut
-            fames odio in at.
+            Check out my diverse and versatile skills!
           </p>
         </motion.div>
 
-        <div className="mt-16 md:mt-0">
+        {/* <div className="mt-16 md:mt-0">
           {isAboveLarge ? (
             <div
               className="relative z-0 ml-20 before:absolute before:-top-10 before:-left-10
@@ -44,7 +46,7 @@ const MySkills = () => {
           ) : (
             <img alt="skills" className="z-10" src="assets/skills-image.png" />
           )}
-        </div>
+        </div> */}
       </div>
 
       {/* SKILLS */}
@@ -75,6 +77,7 @@ const MySkills = () => {
             and TypeScript, I excel at building robust, end-to-end applications with seamless
             integration between frontend and backend components.
           </p>
+          <FullstackIcons/>
         </motion.div>
 
         {/* WEB */}
@@ -96,13 +99,14 @@ const MySkills = () => {
                 Web Development
               </p>
             </div>
-            <div className="w-1/2 md:w-3/4 h-32 bg-red absolute right-0 top-0 z-[-1]" />
+            <div className="w-1/2 md:w-3/4 h-32 bg-purple absolute right-0 top-0 z-[-1]" />
           </div>
           <p className="mt-5">
             Experienced in developing web applications and websites, including this portfolio
              I combine my expertise in HTML, CSS, and JavaScript to create visually appealing
               and user-friendly experiences that adapt flawlessly to various devices.
           </p>
+          <WebIcons/>
         </motion.div>
         {/* DESIGN */}
         <motion.div
@@ -123,13 +127,14 @@ const MySkills = () => {
                 UI/UX Design
               </p>
             </div>
-            <div className="w-1/2 md:w-3/4 h-32 bg-yellow absolute right-0 top-0 z-[-1]" />
+            <div className="w-1/2 md:w-3/4 h-32 bg-green absolute right-0 top-0 z-[-1]" />
           </div>
           <p className="mt-5">
-            Passionate about UI/UX design, I have experience in conducting user research
-            , interviews, and employing the entire design process. Skilled in using Figma for prototyping
-            , I strive to craft visually appealing and intuitive interfaces that optimize user satisfaction.
+            Passionate about UI/UX design, I have experience in conducting user research, 
+            interviews, and employing the entire design process. Skilled in using Figma for prototyping and expereince with the Adobe suite, 
+            I strive to craft visually appealing and intuitive interfaces.
           </p>
+          <UXIcons/>
         </motion.div>
       </div>
     </section>
