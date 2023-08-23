@@ -13,17 +13,17 @@ export const ProjectNav = () =>{
     return (
         <div className="bg-blue z-40 w-full fixed top-0 py-6">
             <div className="flex items-center justify-between mx-auto w-5/6">
-                <h4 className="font-playfair text-3xl font-bold text-yellow">
-                    <a href="/" className="hover:text-white">TM</a>
+                <h4 className="font-playfair text-3xl font-bold text-black">
+                    <a href="/" className="hover:underline">TM</a>
                 </h4>
                 {isDesktop ? (
-                <div className="flex justify-between gap-16 font-opensans text-sm font-semibold">
+                <div className="flex justify-between gap-16 font-opensans text-m font-semibold">
                     <div className="">
-                        <Dropdown title="Projects" trigger="hover">
-                            <Dropdown.Item className=" hover:text-yellow pt-3">
+                        <Dropdown title="PROJECTS" trigger="hover">
+                            <Dropdown.Item className=" hover:underline pt-3">
                             <a href="./fresh">Fresh</a>
                             </Dropdown.Item>
-                            <Dropdown.Item className=" hover:text-yellow pt-3">
+                            <Dropdown.Item className=" hover:underline pt-3">
                             <a href="./case">Case In One Place</a>
                             </Dropdown.Item>
                         </Dropdown>

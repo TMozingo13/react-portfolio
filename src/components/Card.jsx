@@ -16,6 +16,8 @@ export default function MediaCard({title, description, url="/", image}) {
         boxShadow: 0,
         borderColor: "#343434",
         height:375,
+        marginTop: 10,
+        marginBottom: 10,
         }}>
       <CardMedia
         sx={{ height: 250 }}

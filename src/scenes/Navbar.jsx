@@ -10,8 +10,8 @@ const PageLink = ({ pageName, page, selectedPage, setSelectedPage }) => {
   return (
     <AnchorLink
       className={`${
-        selectedPage === lowerCasePage ? "text-yellow" : ""
-      } hover:text-yellow transition duration-500`}
+        selectedPage === lowerCasePage ? "text-decoration: underline" : ""
+      } hover:underline transition duration-500`}
       href={`#${lowerCasePage}`}
       onClick={() => setSelectedPage(lowerCasePage)}
     >
@@ -42,7 +42,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
 
         {/* DESKTOP NAV */}
         {isDesktop ? (
-          <div className="flex justify-between gap-16 font-opensans text-sm font-semibold">
+          <div className="flex justify-between gap-16 font-opensans text-m font-semibold">
             <PageLink
               pageName="HOME"
               page="Home"
@@ -52,17 +52,17 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
             
             <div className="">
               <Dropdown title="PROJECTS" trigger="hover">
-                <Dropdown.Item className="pt-3 border-none">
+                <Dropdown.Item className="hover:underline pt-3 border-none">
                   <PageLink
                     pageName="All"
                     page="Projects"
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}/>
                 </Dropdown.Item>
-                <Dropdown.Item className=" hover:text-yellow pt-3">
+                <Dropdown.Item className=" hover:underline pt-3">
                   <a href="./fresh">Fresh</a>
                 </Dropdown.Item>
-                <Dropdown.Item className=" hover:text-yellow pt-3">
+                <Dropdown.Item className=" hover:underline pt-3">
                   <a href="./case">Case in One Place</a>
                 </Dropdown.Item>
               </Dropdown>

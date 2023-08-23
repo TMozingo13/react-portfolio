@@ -68,7 +68,7 @@ const Landing = ({ setSelectedPage }) => {
 
           </p>
           <p className="mt-8 mb-7 text-m text-center md:text-start w-65">
-            Software developer and UI/UX Designer. Crafting my life’s adventures with a playful spirit and a great playlist!
+            Software developer and UI/UX Designer. Exploring life with a great playlist and an amazing outfit!
           </p>
         </motion.div>
 
@@ -84,21 +84,22 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          {/* TURN THIS INTO A RESUME BUTTON */}
+         
           <button
               className="p-5 mr-10 py-3 px-7 bg-green font-semibold text-deep-blue mt-5 hover:bg-red hover:text-white transition duration-500 w-[135px]"
-              type="submit"
-            >
+              onClick={() => {
+                const link = document.createElement('a');
+                link.href = 'assest/ResumeFall22.pdf';
+                link.setAttribute('download', 'ResumeFall22.pdf');
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
+              >
               RESUME
             </button>
-          {/* <AnchorLink
-            className="bg-gradient-rainblue text-deep-blue rounded-sm  font-semibold
-              hover:bg-blue hover:text-white transition duration-500"
-            onClick={() => setSelectedPage("contact")}
-            href="#contact"
-          >
-            Resume
-          </AnchorLink> */}
+
+      
           <AnchorLink
             className="rounded-r-sm bg-blue px-0.5 py-0.5 h-[48px] mt-5"
             onClick={() => setSelectedPage("projects")}

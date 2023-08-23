@@ -71,7 +71,7 @@ const Projects = () => {
       {/* PROJECTS */}
       <div className="flex justify-center">
         <motion.div
-          className="sm:grid sm:grid-cols-3 gap-8"
+          className="sm:grid sm:grid-cols-2 gap-8"
           variants={container}
           initial="hidden"
           whileInView="visible"
@@ -105,13 +105,13 @@ const Projects = () => {
             title="Case in One Place"
             description="A file Management system that addresses the greatest pains of lawyers currently"
             url="case"
-            image="project-1.jpeg"
+            image="coming.png"
           />
-           <MediaCard 
+           {/* <MediaCard 
             title="Project 5"
             description="Short description of the project"
             image="project-2.jpeg"
-          />
+          /> */}
 
           {/* ROW 3 */}
           {/* <Project title="Project 6" />
