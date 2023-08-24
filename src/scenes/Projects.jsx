@@ -99,13 +99,13 @@ const Projects = () => {
             title="Fresh"
             description="An app to track food and prevent waste"
             url="fresh"
-            image="thumbnail.png"
+            image="freshThumbnail.png"
           />
            <MediaCard 
             title="Case in One Place"
             description="A file Management system that addresses the greatest pains of lawyers currently"
-            url="case"
-            image="coming.png"
+            url=""
+            image="comingSoon.png"
           />
            {/* <MediaCard 
             title="Project 5"

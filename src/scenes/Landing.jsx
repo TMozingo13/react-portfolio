@@ -86,10 +86,10 @@ const Landing = ({ setSelectedPage }) => {
         >
          
           <button
-              className="p-5 mr-10 py-3 px-7 bg-green font-semibold text-deep-blue mt-5 hover:bg-red hover:text-white transition duration-500 w-[135px]"
+              className="p-5 mr-10 py-3 px-7 bg-green font-semibold text-deep-blue mt-5 hover:bg-red hover:underline transition duration-500 w-[135px]"
               onClick={() => {
                 const link = document.createElement('a');
-                link.href = 'assest/ResumeFall22.pdf';
+                link.href = 'assests/ResumeFall22.pdf';
                 link.setAttribute('download', 'ResumeFall22.pdf');
                 document.body.appendChild(link);
                 link.click();
@@ -105,7 +105,7 @@ const Landing = ({ setSelectedPage }) => {
             onClick={() => setSelectedPage("projects")}
             href="#projects"
           >
-            <div className="bg-white px-7 py-3 hover:text-blue transition duration-500 w-full h-full flex items-center justify-center font-semibold">
+            <div className="bg-eggshell px-7 py-3 hover:underline transition duration-500 w-full h-full flex items-center justify-center font-semibold">
               MY WORK
             </div>
           </AnchorLink>

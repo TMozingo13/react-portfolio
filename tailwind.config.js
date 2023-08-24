@@ -13,6 +13,7 @@ module.exports = {
         grey: "#ededed",
         black: "#000000",
         purple: "#B39DDB",
+        eggshell: "#fcf6ef",
         "dark-grey": "#343434",
         "opaque-black": "#000000",
       },
